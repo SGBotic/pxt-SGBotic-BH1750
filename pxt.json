@@ -1,0 +1,19 @@
+{
+    "name": "pxt-SGBotic-BH1750",
+    "version": "0.1",
+    "description": "Makdecode block for BH1750 Wide Angle Ambient Light Sensor",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*",
+        "radio": "*"
+    },
+    "files": [
+        "README.md",
+        "bh1750.ts",
+        "base.ts"
+    ],
+    "testFiles": [
+        "tests.ts"
+    ],
+    "public": true
+}

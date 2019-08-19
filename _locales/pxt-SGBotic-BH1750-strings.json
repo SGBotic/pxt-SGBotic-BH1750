@@ -1,0 +1,9 @@
+{
+  "SGBotic.I2C_ADDR.addr1|block": "35",
+  "SGBotic.I2C_ADDR.addr2|block": "92",
+  "SGBotic.initBH1750|block": "Initialize BH1750 at address %addr",
+  "SGBotic.readLux|block": "lux",
+  "SGBotic|block": "SGBotic",
+  "{id:category}SGBotic": "SGBotic",
+  "{id:subcategory}BH1750": "BH1750"
+}

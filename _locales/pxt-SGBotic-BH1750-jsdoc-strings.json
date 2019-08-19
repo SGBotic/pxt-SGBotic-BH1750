@@ -1,0 +1,5 @@
+{
+  "SGBotic": "Makecode block for BH1750 Wide Angle Ambient Light Sensor\n\nSGBotic blocks",
+  "SGBotic.initBH1750": "Configure BH1750 and set the I2C address",
+  "SGBotic.readLux": "Read ambient light"
+}
