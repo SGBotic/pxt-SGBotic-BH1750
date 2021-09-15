@@ -1,40 +1,90 @@
+// total=2811 new=24.48% cached=0.00% other=75.52%
+(function (ectx) {
 'use strict';
-pxsim.noRefCounting();
+const runtime = ectx.runtime;
+const oops = ectx.oops;
+const doNothing = ectx.doNothing;
+const pxsim = ectx.pxsim;
+const globals = ectx.globals;
+const maybeYield = ectx.maybeYield;
+const setupDebugger = ectx.setupDebugger;
+const isBreakFrame = ectx.isBreakFrame;
+const breakpoint = ectx.breakpoint;
+const trace = ectx.trace;
+const checkStack = ectx.checkStack;
+const leave = ectx.leave;
+const checkResumeConsumed = ectx.checkResumeConsumed;
+const setupResume = ectx.setupResume;
+const setupLambda = ectx.setupLambda;
+const checkSubtype = ectx.checkSubtype;
+const failedCast = ectx.failedCast;
+const buildResume = ectx.buildResume;
+const mkVTable = ectx.mkVTable;
+const bind = ectx.bind;
+const leaveAccessor = ectx.leaveAccessor;
+const __this = runtime;
+const pxtrt = pxsim.pxtrt;
+let yieldSteps = 1;
+ectx.setupYield(function() { yieldSteps = 100; })
 pxsim.setTitle("pxt-SGBotic-BH1750");
 pxsim.setConfigData({}, {});
-pxsim.pxtrt.mapKeyNames = [
+pxtrt.mapKeyNames = [
  ""
 ];
 __this.setupPerfCounters([]);
+const pxsim_Array__getAt = pxsim.Array_.getAt;
+const pxsim_Array__length = pxsim.Array_.length;
+const pxsim_Array__mk = pxsim.Array_.mk;
+const pxsim_Array__push = pxsim.Array_.push;
+const pxsim_Boolean__bang = pxsim.Boolean_.bang;
+const pxsim_String__concat = pxsim.String_.concat;
+const pxsim_String__stringConv = pxsim.String_.stringConv;
+const pxsim_numops_toBool = pxsim.numops.toBool;
+const pxsim_numops_toBoolDecr = pxsim.numops.toBoolDecr;
+const pxsim_pxtcore_mkAction = pxsim.pxtcore.mkAction;
+const pxsim_pxtcore_mkClassInstance = pxsim.pxtcore.mkClassInstance;
+const pxsim_pxtrt_ldlocRef = pxsim.pxtrt.ldlocRef;
+const pxsim_pxtrt_mapGetByString = pxsim.pxtrt.mapGetByString;
+const pxsim_pxtrt_stclo = pxsim.pxtrt.stclo;
+const pxsim_pxtrt_stlocRef = pxsim.pxtrt.stlocRef;
+const pxsim_Boolean_ = pxsim.Boolean_;
+const pxsim_pxtcore = pxsim.pxtcore;
+const pxsim_String_ = pxsim.String_;
+const pxsim_ImageMethods = pxsim.ImageMethods;
+const pxsim_Array_ = pxsim.Array_;
+const pxsim_pxtrt = pxsim.pxtrt;
+const pxsim_numops = pxsim.numops;
 
 
-var _main___P1 = entryPoint = function (s) {
-var r0 = s.r0, step = s.pc;
+function _main___P35993(s) {
+let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
 
 while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0)) return null;
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
 switch (step) {
   case 0:
 
-    r0 = 0;
-    globals.zeroFx8___348 = (r0);
-    r0 = 1;
-    globals.oneFx8___349 = (r0);
-    r0 = 2;
-    globals.twoFx8___350 = (r0);
-    setupResume(s, 2);
-    pxsim.basic.showLeds(new pxsim.Image(5, [0,0,255,0,0,0,0,255,0,0,0,0,255,0,0,0,0,255,0,0,0,0,255,0,0,0]), 400);
-    checkResumeConsumed();
-    return;
-  case 2:
-    r0 = s.retval;
+    r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-_main___P1.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"tests.ts","functionName":"<main>","argumentNames":[]}
-_main___P1.continuations = [ 2 ]
+_main___P35993.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"base.ts","functionName":"<main>","argumentNames":[]}
+_main___P35993.continuations = [  ]
+
+function _main___P35993_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: _main___P35993, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+} }
 
 
-setupDebugger(1, [])
+
+
+
+const breakpoints = setupDebugger(1, [])
+
+return _main___P35993
+})

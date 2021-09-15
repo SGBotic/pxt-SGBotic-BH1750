@@ -42,7 +42,7 @@ namespace SGBotic {
     export function readLux(): number {
         
         pins.i2cWriteNumber(i2cAddr, ONE_TIME_HIGH_RES_MODE, NumberFormat.UInt8BE)
-        basic.pause(200)
+        basic.pause(10)
         let readbuf = pins.i2cReadBuffer(i2cAddr, pins.sizeOf(NumberFormat.UInt8LE) * 2)
         
         let luminance = readbuf[0]
